@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <script>
+       var counter=0;
+       var h = 10;
+       var e = 20;
+       var m = 50;
+       var so = 50;
+       var s = 50;
+       var tm = h+e+m+so+s;
+       document.write("Total Marks = ",tm,"<br>");
+       var per = tm/5;
+       document.write("PER = ",per,"%","<br>");
+       if(h>=36 && e>=36 && m>=36 && so>=36 && s>=36)
+       {
+            if(per>=91 && per<=100)
+            {
+                document.write("A+");
+            }
+            else if(per>=81 && per<91)
+            {
+                document.write("A");
+            }
+            else if(per>=71 && per<81)
+            {
+                document.write("B+");
+            }
+            else if(per>=61 && per<71)
+            {
+                document.write("B");
+            }
+            else if(per>=51 && per<61)
+            {
+                document.write("C+");
+            }
+            else if(per>=41 && per<51)
+            {
+                document.write("C");
+            }
+            else
+            {
+                document.write("D");
+            }
+       }
+       else
+       {
+            document.write("Fail","<br>");
+            if(h<36)
+            {
+                document.write("Fail in Hindi:- ",h,"<br>");
+                counter++;
+            }
+            if(e<36)
+            {
+                document.write("Fail in English:- ",e,"<br>");
+                counter++;
+            }
+            if(m<36)
+            {
+                document.write("Fail in Maths:- ",m,"<br>");
+                counter++;
+            }
+            if(so<36)
+            {
+                document.write("Fail in So Science:- ",so,"<br>");
+                counter++;
+            }
+            if(s<36)
+            {
+                document.write("Fail in Science:- ",s,"<br>");
+                counter++;
+            }
+            document.write("Fail in ",counter," Subjects");
+       }
+    </script>
+</body>
+</html>

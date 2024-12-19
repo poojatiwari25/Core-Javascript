@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Methods of array</h1>
+  <script>
+    var a = ["ajay","karan","raj","bhavesh"];
+    var L = a.length;
+    document.write("LENGTH OF ARRAY : ",L);
+    document.write("<br>");
+
+    a.sort();
+    document.write("SORTING OF ARRAY : ",a);
+    document.write("<br>");
+
+    a.push("rani");
+    document.write("AFTER PUSH OPERATION : ",a);
+    document.write("<br>");
+
+    a.pop();
+    document.write("AFTER POP OPERATION : ",a);
+    document.write("<br>");
+
+    a.shift();
+    document.write("AFTER SHIFT OPERATION : ",a);
+    document.write("<br>");
+
+    a.unshift("sagar");
+    document.write("AFTER UNSHIFT OPERATION : ",a);
+    document.write("<br>");
+ 
+    a.reverse();
+    document.write("REVERSE OF AN ARRAY : ",a);
+    document.write("<br>");
+    document.write("<br>");
+
+    var x = [10,34,12,55,2];
+    console.log("NEW ARRAY ",x);
+    document.write("<br>");
+    x.sort();
+    document.write("SORTING OF AN ARRAY: ",x);
+    document.write("<br>");
+    x.reverse();
+    document.write("REVERSE OF AN ARRAY: ",x)
+    document.write("<br>");
+
+    var x=10;
+    y = Array.isArray(a);
+    document.write("CHECKING AN ARRAY USING ARRAY.ISARRAY() METHOD: ",y);
+    document.write("<br>");
+
+    var a1=["a","b","c"];
+    var a2=["d","e","f"];
+    var a3=["g","h","i"];
+    document.write("CONCATENATION OF AN ARRAY : ")
+    document.write(a1.concat(a2,a3));
+    document.write("<br><br>");
+    document.write("ADDING AN ARRAY BY SIMPLE + OPERATOR : ", a1+a2+a3);
+    document.write("<br>");
+
+    var a = ["a","b","c"];
+    document.write("INDEXOF METHOD : ");
+    document.write(a.indexOf("b"));
+    document.write("<br>");
+
+    var a = ["aa","bb","cc"];
+    document.write("TOSTRING METHOD : ");
+    var text = a.toString();
+    document.write(text);
+    document.write("<br>");
+
+    var a = ["a","b","c","d","e"];
+    document.write("SLICE METHOD : ");
+    var s = a.slice(1,4);
+    document.write(s);
+    document.write("<br>");
+ 
+    document.write("SPLICE METHOD : ");
+    a.splice(2,0,"x","y");
+    document.write(a);
+    document.write("<br>");
+
+   var ary = [10,20,30,40,50];
+   document.write("GIVEN NEW ARRAY : ", ary);
+   document.write("<br>");
+   document.write("MAP METHOD : ");
+   var ary1 = ary.map(function add(x){
+    return x+1;
+   });
+   document.write(ary1);
+   document.write("<br>");
+  
+
+
+   var ary = [10,21,30,41,50];
+   document.write("GIVEN NEW ARRAY : ",ary);
+   document.write("<br>");
+   document.write("FILTER METHOD : ");
+   var ary1 = ary.filter(function even(x)
+   {
+      if(x%2==0)
+      {
+        return x;
+      }
+   });
+   document.write(ary1);
+  document.write("<br>");
+
+   "abc".toUpperCase();
+   "xyz".toUpperCase();
+   [1,2,3].push(4);
+
+
+  </script>
+</body>
+</html> 

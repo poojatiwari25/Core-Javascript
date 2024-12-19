@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<style>
+p{
+    color: gray;
+}
+</style>
+<script>
+function check(data){
+    // alert("hello");
+      var EightChar = new RegExp('(?=.{8,})');
+      var UpperChar = new RegExp('(?=.*[A-Z])');
+      var LowerChar = new RegExp('(?=.*[a-z])');
+      var NumberChar = new RegExp('(?=.*[0-9])');
+      var SpecialChar = new RegExp('(?=.[!@#$%^&])');
+      if(EightChar.test(data)){
+        document.getElementsByTagName("p")[0].style.color="green";
+      }
+      else{
+        document.getElementsByTagName("p")[0].style.color= "red";
+      }
+       if(UpperChar.test(data)){
+        document.getElementsByTagName("p")[1].style.color= "green";
+      }
+      else{
+        document.getElementsByTagName("p")[1].style.color= "red";
+      }
+       if(LowerChar.test(data)){
+        document.getElementsByTagName("p")[2].style.color= "green";
+      }
+      else{
+        document.getElementsByTagName("p")[2].style.color= "red";
+      }
+       if(NumberChar.test(data)){
+        document.getElementsByTagName("p")[3].style.color= "green";
+      }
+      else{
+        document.getElementsByTagName("p")[3].style.color= "red";
+      }
+       if(SpecialChar.test(data)){
+        document.getElementsByTagName("p")[4].style.color= "green";
+      }
+      else{
+        document.getElementsByTagName("p")[4].style.color= "red";
+      }
+
+}
+</script>
+</head>
+<body>
+Password:<input type="text" id="pass" onkeyup="check(this.value)">
+<p>8 minimum characters</p>
+<p>1 Uppercase character</p>
+<p>1 Lowercase character</p>
+<p>Atleast 1 number</p>
+<p>1 special character</p>
+</body>
+</html>
