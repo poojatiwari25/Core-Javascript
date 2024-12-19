@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <style type="text/css">
+    input {
+      width: 35px;
+      height: 25px;
+    }
+    .container {
+      border: 1px solid black;
+      height: 280px;
+      width: 200px;
+      padding: 10px; 
+    }
+    #output {
+      width: 200px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>  
+  <div class="container">
+    <input type="text" id="output" readonly><br><br>
+    <input type="button" class="test" value="9" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="8" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="7" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="+" onclick="getValue(this.value)" disabled>
+    <br><br>
+    <input type="button" class="test" value="6" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="5" onclick="getValue(this.value)"disabled>
+    <input type="button" class="test" value="4" onclick="getValue(this.value)"disabled>
+    <input type="button" class="test" value="-" onclick="getValue(this.value)" disabled> 
+    <br><br>
+    <input type="button" class="test" value="3" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="2" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="1" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="*" onclick="getValue(this.value)" disabled>
+    <br><br>
+    <input type="button" class="test" value="0" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" value="=" onclick="getValue(this.value)" disabled>
+    <input type="button" class="test" onclick="clearValue()" value="CE" disabled>
+    <input type="button" class="test"  onclick="getValue(this.value)" value="/" disabled>
+    <br><br>
+    <input type="button" value="On" onclick="On()">
+    <input type="button" class="test" value="Off" id="off" onclick="Off()" disabled>
+  </div>
+
+  <script>
+    function getValue(value) {
+      var output = document.getElementById('output');
+      output.value += value;
+    }
+
+    function clearValue() {
+      document.getElementById('output').value = '';
+    }
+
+    function On() {
+     var buttons = document.getElementsByClassName("test");
+     for(var i=0;i<buttons.length;i++){
+      buttons[i].disabled=false;
+     }
+     document.getElementById("off").disabled=false;
+
+  }
+
+    function Off() {
+      var buttons = document.getElementsByClassName("test");
+     for(var i=0;i<buttons.length;i++){
+      buttons[i].disabled=true;
+     }
+     document.getElementById("off").disabled=true;
+    }
+  </script>
+</body>
+</html>
