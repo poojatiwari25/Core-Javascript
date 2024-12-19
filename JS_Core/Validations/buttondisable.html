@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<style>
+::placeholder{
+    color: red;
+}
+</style>
+<script>
+
+function validation(){
+
+    var UNAME = document.getElementById("uname").value;
+    var CITY = document.getElementById("city").value;
+
+    if((UNAME=="") || (CITY=="" )|| document.getElementById("male_btn").checked==false && 
+        document.getElementById("female_btn").checked== false)
+    {
+      document.getElementById("sub_btn").disabled=true;
+    }
+    else{
+      document.getElementById("sub_btn").disabled=false;
+    }
+    if(UNAME=""){
+        document.getElementById("uname").placeholder="plzz fill the name";
+    }
+}
+</script>
+</head>
+<body>
+<form>
+Name:<input type="text" id="uname"  ><br><br>
+Select City:<select id="city" onchange="validation()">
+    <option value="indore">Indore</option>
+    <option value="Pune">Pune</option>
+</select><br><br>
+<input type="radio" name="gender" id="male_btn" onclick="validation()">Male
+<input type="radio" name="gender" id="female_btn" onclick="validation()">Female
+<br><br>
+<input type="submit" disabled id="sub_btn">
+</form>
+</body>
+
+</html>

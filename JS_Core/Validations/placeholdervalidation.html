@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+::placeholder{
+    color: red;
+}
+span{
+    color: red;
+}
+</style>
+</head>
+<body>
+<form action="design.html" onsubmit="return validation()">
+  Name:<input type="text" id="uname">
+  <span id="uname_error"></span><br><br>
+  City:<select id="city">
+   <option value="">select city</option>
+   <option value="indore">Indore</option>
+   <option value="pune">Pune</option>  
+  </select>
+  <span id="city_error"></span> <br><br>
+<input type="submit">
+</form>
+<script>
+function validation(){
+    var result=true;
+    var UNAME = document.getElementById("uname").value;
+    var CITY = document.getElementById("city").value;
+
+     if(UNAME=="")
+     {
+         document.getElementById("uname").placeholder= "plz enter name";
+         result=false;
+
+     }
+     if (CITY==""){
+         document.getElementById("city_error").innerText= "plz enter name";
+         result=false;
+     }
+     return result;
+}
+</script>
+</body>
+</html>

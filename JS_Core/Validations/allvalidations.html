@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        span 
+        {
+            color: red;
+        }
+    </style>
+    <script>
+        function validation()
+        {
+            var main_result=false;
+            var common_result = true;
+            var UNAME = document.getElementById("uname").value;
+            var FNAME = document.getElementById("fname").value;
+            var EMAIL = document.getElementById("email").value;
+            var PASS = document.getElementById("pass").value;
+            var NUM = document.getElementById("num").value;
+            var ADD = document.getElementById("add").value;
+            var IMG = document.getElementById("img").value;
+            var CITY = document.getElementById("city").value;
+            var DOB = document.getElementById("dob").value;
+            var TOB = document.getElementById("tob").value;
+            var COLOR = document.getElementById("color").value;
+            //alert(COLOR);
+            if(UNAME=="")
+            {
+                document.getElementById("uname_error").innerText="Plz Fill The Name";
+                common_result= false;
+            }
+            if(FNAME=="")
+            {
+                document.getElementById("fname_error").innerText="Plz Fill The Father Name";
+                common_result= false;
+            }
+            if(EMAIL=="")
+            {
+                document.getElementById("email_error").innerText="Plz Fill The Email";
+                common_result= false;
+            }
+            if(PASS=="")
+            {
+                document.getElementById("pass_error").innerText="Plz Fill The Password";
+                common_result= false;
+            }
+            if(NUM=="")
+            {
+                document.getElementById("num_error").innerText="Plz Fill The Number";
+                common_result= false;
+            }
+            if(ADD=="")
+            {
+                document.getElementById("add_error").innerText="Plz Fill The Address";
+                common_result= false;
+            }
+            if(IMG=="")
+            {
+                document.getElementById("img_error").innerText="Plz Select The Image";
+                common_result= false;
+            }
+            if(CITY=="")
+            {
+                document.getElementById("city_error").innerText="Plz Select The City";
+                common_result= false;
+            }
+            if(DOB=="")
+            {
+                document.getElementById("dob_error").innerText="Plz Select The DOB";
+                common_result= false;
+            }
+            if(TOB=="")
+            {
+                document.getElementById("tob_error").innerText="Plz Select The TOB";
+                common_result= false;
+            }
+            if(COLOR=="#000000")
+            {
+                document.getElementById("color_error").innerText="Plz Select The Color";
+                common_result= false;
+            }       
+
+            var gender_result=false;
+            var CountRadioButton=document.getElementsByName("gender").length;
+            var Gender=document.getElementsByName("gender");
+            //alert(CountRadioButton);
+            for(var i=0;i<CountRadioButton;i++)
+            {
+                if(Gender[i].checked==true)
+                {
+                    gender_result=true;
+                }                   
+            }
+            if(gender_result==false)
+            {
+                document.getElementById("gender_error").innerText="Plz Select Gender";
+            }
+
+            var counter=0;
+            var hobby_result=false;
+            var CountCheckBox=document.getElementsByName("hobby").length;
+            var Hobby=document.getElementsByName("hobby");
+            //alert(CountRadioButton);
+            for(var i=0;i<CountCheckBox;i++)
+            {
+                if(Hobby[i].checked==true)
+                {
+                    counter = counter+1;
+                }                   
+            }
+            //alert(counter);
+            if(counter==0)
+            {
+                document.getElementById("hobby_error").innerText="Plz Select Hobby";
+                hobby_result=false;
+            }
+            else if(counter==1)
+            {
+                document.getElementById("hobby_error").innerText="Plz Select Min 2 Hobby";
+                hobby_result=false;
+            }
+            else
+            {
+                hobby_result=true;
+            }
+            if(common_result==true && gender_result==true && hobby_result==true)
+            {
+                main_result=true;
+            }
+            else
+            {
+                main_result=false;
+            }
+            return main_result;
+        }
+    </script>
+</head>
+<body>
+    <form action="design.html" onsubmit="return validation()">
+        Name<input type="text" id="uname" onfocus="check_name()" onkeyup="check_name()">
+        <span id="uname_error"></span>
+        <br><br>
+        Father Name<input type="text" id="fname">
+        <span id="fname_error"></span>
+        <br><br>
+        Email<input type="text" id="email">
+        <span id="email_error"></span>
+        <br><br>
+        Password<input type="password" id="pass">
+        <span id="pass_error"></span>
+        <br><br>
+        Number<input type="number" id="num">
+        <span id="num_error"></span>
+        <br><br>
+        Add<textarea id="add"></textarea>
+        <span id="add_error"></span>
+        <br><br>
+        Image<input type="file" id="img">
+        <span id="img_error"></span>
+        <br><br>
+        City<select id="city">
+                                <option value="">Select City</option>
+                                <option value="indore">Indore</option>
+                                <option value="pune">Pune</option>
+                                <option value="bhopal">Bhopal</option>
+                            </select>
+                            <span id="city_error"></span>
+                            <br><br>
+        DOB<input type="date" id="dob">
+        <span id="dob_error"></span>
+        <br><br>
+        TOB<input type="time" id="tob">
+        <span id="tob_error"></span>
+        <br><br>
+        Color<input type="color" id="color">
+        <span id="color_error"></span>
+        <br><br>
+        Gender<span>*</span>:-<input type="radio" name="gender">Male
+                              <input type="radio" name="gender">Female
+               <span id="gender_error"></span><br><br>
+        Hobby<span>*</span>:-<input type="checkbox" name="hobby">Cricket
+                              <input type="checkbox" name="hobby">Football
+                              <input type="checkbox" name="hobby">Reading
+                              <input type="checkbox" name="hobby">Singing
+                              <input type="checkbox" name="hobby">Dancing
+               <span id="hobby_error"></span><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

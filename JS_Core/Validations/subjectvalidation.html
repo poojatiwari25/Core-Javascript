@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+   <script>
+      function class_fn()
+      {
+         var CV = document.getElementById("class_value").value;
+         //alert(CV);
+         if(CV==10)
+         {
+            document.getElementById("status_area").style.display="block";
+            document.getElementById("subects_area").style.display="none";
+         }
+         else if(CV==11)
+         {
+            document.getElementById("subects_area").style.display="block";
+            document.getElementById("status_area").style.display="none";
+         }
+         else if(CV==12)
+         {
+            document.getElementById("subects_area").style.display="block";
+            document.getElementById("status_area").style.display="block";
+         }
+         else   
+         {
+            document.getElementById("subects_area").style.display="none";
+            document.getElementById("status_area").style.display="none";
+         }
+      }
+   </script>
+</head>
+<body>
+   Select Class:-<select id="class_value" onchange="class_fn()">
+      <option value="">Select Class</option>
+      <option value="9">9th</option>
+      <option value="10">10th</option>
+      <option value="11">11th</option>
+      <option value="12">12th</option>
+   </select>
+   <br>
+   <br>
+   <div id="status_area" style="display: none;">
+      Status:-<input type="radio" name="status">Regular
+            <input type="radio" name="status">Private
+   </div><br>
+   <div id="subects_area" style="display: none;">
+      Subjects:-<input type="radio" name="subject">Maths
+            <input type="radio" name="subject">Bio
+            <input type="radio" name="subject">Comm.
+   </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title> </title>
+    <script>
+      function validation() {
+            let uname = document.getElementById('uname').value;
+            let email = document.getElementById('email').value;
+            let pass = document.getElementById('pass').value;
+            let submitButton = document.getElementById('submitbutton');            
+            $(document).ready(function()
+            {
+                $('#pass').keyup(function()
+                {
+                    let passLength=$('#pass').val().length;
+                    $('#msg').text(passLength);
+
+                    if (passLength < 1)
+                    {
+                        $('#msg').text('')
+                    }
+                    else if ( passLength <= 4)
+                    {
+                        $('#msg').text('Weak');
+                        $('#msg').css('color','red')
+                    }
+                    else if ( passLength <= 8)
+                    {
+                        $('#msg').text('Good');
+                        $('#msg').css('color','orange');
+                    }
+                    else 
+                    {
+                        $('#msg').text('Strong');
+                        $('#msg').css('color','green');
+                    }
+                })
+            })
+            // password strength weak , good , strong End
+
+
+
+            // Start Password show hide with click Jquery
+            $(document).ready(function () {
+                $('#hidepass').click(function () {
+                    $('#pass').attr('type', 'text');
+                    $('#hidepass').hide();
+                    $('#showpass').show();
+                })
+                $('#showpass').click(function () {
+                    $('#pass').attr('type', 'password');
+                    $('#showpass').hide();
+                    $('#hidepass').show();
+                })
+            })
+            // End Password show hide with click Jquery
+
+
+
+            // Check  radio button is checked
+
+
+            let genderChecked = false;
+            let gender = document.getElementsByName('gender');
+
+            for (let i = 0; i < gender.length; i++) 
+            {
+                if (gender[i].checked) {
+                    genderChecked = true;
+                    
+                }
+            }
+
+            // Checking  hobby checkbox is checked
+
+            let counter = 0;
+            let hobbyChecked = false;
+            let countChckbox = document.getElementsByName('hobby').length;
+            let hobbies = document.getElementsByName('hobby');
+
+            for (let i = 0; i < countChckbox; i++) 
+            {
+                if (hobbies[i].checked == true) 
+                {
+                    hobbyChecked = true;
+                    counter = counter +1;
+
+                }
+            }
+            if(counter < 2)
+            {
+                hobbyChecked = false;
+                
+            }
+            else
+            {
+                hobbyChecked = true;
+            }
+
+            // Enable when all condition true 
+            
+            submitButton.disabled = !(uname && email && pass && genderChecked && hobbyChecked);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="design.html" id="form">
+        Name: <input type="text" name="uname" id="uname" oninput="validation()"><br><br>
+        Email: <input type="email" name="email" id="email" oninput="validation()"><br><br>
+        Password: <input type="password" name="pass" id="pass" oninput="validation()">
+        <i id="hidepass" class="fa fa-eye-slash" style="font-size:24px"></i>
+        <i id="showpass" class="fa fa-eye" style="font-size:24px; display: none;"></i>
+        <span id="msg"></span>
+        <br><br>
+        Gender:
+        <input type="radio" name="gender" value="male" oninput="validation()">Male
+        <input type="radio" name="gender" value="female" oninput="validation()">Female
+        <br><br>
+        Hobby:
+        <input type="checkbox" name="hobby" value="Cricket" oninput="validation()">Cricket
+        <input type="checkbox" name="hobby" value="Football" oninput="validation()">Football
+        <input type="checkbox" name="hobby" value="Singing" oninput="validation()">Singing
+        <input type="checkbox" name="hobby" value="Dancing" oninput="validation()">Dancing
+        <br><br>
+        <input type="submit" value="Submit" id="submitbutton" disabled>
+    </form>
+</body>
+
+</html>
