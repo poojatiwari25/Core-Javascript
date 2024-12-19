@@ -1,0 +1,31 @@
+<script type="text/javascript">
+var ary = [];
+var n, c = 0;
+var s = parseInt(prompt('Enter size of array: '));
+console.log('Enter', s, 'elements: ');
+
+for (var i = 0; i < s; i++) {
+    var n = parseInt(prompt('Enter element ' +i));
+    ary.push(n);
+}
+
+ary.forEach(function (v, i, ar) {
+    if (v == 0 || v == 1) {
+        console.log(v, 'is not prime');
+    } 
+    else {
+       for (var i = 2;i<=v; i++) {
+            if (v%i === 0) {
+                break;
+            }
+        }
+        if (i==v) {
+            c++;
+            console.log(v, 'is prime');
+        }
+    }
+});
+
+console.log('Count is:', c);
+
+</script>

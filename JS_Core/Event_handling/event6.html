@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="r"></h1>
+<input type="number" name="" id="i1"><br>
+<input type="number" name="" id="i2"><br>
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">*</button>
+<button onclick="div()">/</button>
+</body>
+<script>
+function add()
+{
+var a = document.getElementById('i1').value;
+var b = document.getElementById('i2').value;
+document.getElementById('r').innerText = parseInt(a) + parseInt(b);
+}
+function sub()
+{
+var a =document.getElementById('i1').value;
+var b =document.getElementById('i2').value;
+document.getElementById('r').innerText = parseInt(a) - parseInt(b);
+}
+function mul()
+{
+var a=document.getElementById('i1').value;
+var b=document.getElementById('i2').value;
+document.getElementById('r').innerText = parseInt(a) * parseInt(b);
+}
+function div()
+{
+var a=document.getElementById('i1').value;
+var b=document.getElementById('i2').value;
+document.getElementById('r').innerText = parseInt(a) / parseInt(b);
+}
+</script>
+</html>
+
+
+
+   

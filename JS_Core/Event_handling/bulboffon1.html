@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+
+<button onclick="show()">start</button>
+<button onclick="stops()">stop</button>
+</body>
+<script>
+function show()
+{
+    var i=0;
+    t=setInterval(function(){
+    if(i>=10)
+    {
+        stops();
+    }
+    document.getElementsByTagName('img')[i].src="images/bulbon.png"; 
+    i++;  
+    },1000);
+    }
+    function stops()
+    {
+        clearInterval(t);
+}
+</script>
+
+</html>

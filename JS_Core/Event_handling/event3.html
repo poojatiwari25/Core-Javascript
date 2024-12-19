@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<h1>hello</h1>
+<h1 class="p1">hello</h1>
+<h1 id="p">hello</h1>
+<h1>hello</h1>
+<h1 class="p1">hello</h1> 
+
+</body>
+<script type="text/javascript">
+	document.getElementsByTagName('h1')[0].innerText="changed by tagname";
+    document.getElementsByClassName('p1')[0].innerText="changed by classname";
+    document.getElementsByClassName('p1')[1].innerText="changed by classname";
+    document.getElementById('p').innerText="changed by id";
+</script>
+</html>
+
+
+

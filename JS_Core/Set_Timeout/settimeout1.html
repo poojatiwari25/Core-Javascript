@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="p"></h1>
+ <button onclick="show()">click me</button>
+</body>
+<script>
+function show()
+{
+	for(let i=1;i<10;i++)
+	{
+	setTimeout (function() {
+document.getElementById('p').innerText=i;	
+},i*1000);
+}
+}
+</script>
+</html>

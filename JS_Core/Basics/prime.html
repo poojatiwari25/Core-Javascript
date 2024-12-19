@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+var n = parseInt(prompt('Enter a number: '));
+if(n==0 || n==1){
+    console.log("no is not prime");
+}
+for(var i =2;i<=n;i++){
+   if(n%i==0){
+       break;
+   }
+}
+if(i==n){
+    console.log("no is prime");
+}else{
+    console.log("no is not prime");
+}
+
+///2nd way
+var n = parseInt(prompt('Enter a number: '));
+var i;
+var c=0;
+if(n==0 || n==1){
+    console.log("no is not prime");
+}
+for(var i=2;i<=n;i++){
+   if(n%i==0){
+       c++;
+     }
+}
+if(c==1){
+    console.log("no is prime");
+}else{
+    console.log("no is not prime");
+}
+
+</script>
+</body>
+</html>

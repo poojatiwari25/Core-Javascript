@@ -1,0 +1,21 @@
+<script type="text/javascript">
+var ary=[1,2,4,3,5,6,4,7,8];
+var a =ary[0];
+var b =ary[1]; 
+ary.forEach(function(v,i,ar)
+{
+   for(i=1;i<=v;i++)
+   {
+    if(ary[i]<a)
+    {
+        b=a;
+        a=ary[i];
+    }
+    else if(ary[i]<b)
+    {
+        b=ary[i];
+    }
+   }
+ })
+console.log('Second smallest element is',a,b);
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var i,j,k,l;
+for(i=1;i<=5;i++)
+{
+    for(j=1;j<=5-i;j++)
+      document.write('_');
+    for(k=1;k<=i;k++)
+      document.write(k);
+    for(l=i-1;l>=1;l--)
+      document.write(l);
+    document.write('<br>');
+}
+// ------------------------------------------------------------------------
+
+
+var i,j,k,l;
+for(i=1;i<=5;i++)
+{
+    for(j=1;j<=5-i;j++)
+      document.write('_');
+    for(k=1;k<=i*2-1;k=k+2)
+      document.write(k);
+    for(l=(i-1)*2-1;l>=1;l=l-2)
+      document.write(l);
+    document.write('<br>');
+}
+
+// ------------------------------------------------------------------------
+
+
+var i,j,k,l;
+for(i=1;i<=5;i++)
+{
+    for(j=1;j<=i-1;j++)
+      document.write('_');
+    for(k=1;k<=6-i;k++)
+      document.write(k);
+    for(l=5-i;l>=1;l--)
+      document.write(l);
+    document.write('<br>');
+}
+
+// ------------------------------------------------------------------------
+
+var i,j,k,l;
+for(i=1;i<=5;i++)
+{
+    for(j=1;j<=i-1;j++)
+      document.write('_');
+    for(k=11-2*i;k>=1;k=k-2)
+      document.write(k);
+    for(l=3;l<=11-2*i;l=l+2)
+      document.write(l);
+    document.write('<br>');
+}
+
+
+</script>
+</body>
+</html>

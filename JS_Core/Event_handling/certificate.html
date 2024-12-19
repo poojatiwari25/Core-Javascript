@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+.all {
+    width: 500px;
+    height: 500px;
+    border: 30px dashed #94b8b8;
+    background-color:  #e6f2ff;
+    /*border-radius: 30px;*/
+    margin-left: 400px;
+    margin-top: 40px;
+}
+.center {
+    margin-top: 49px;
+}
+input {
+    padding-top: 15px;
+    font-size: 18px;
+    padding-left: 9px;
+    width: 300px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border:none;
+}
+button#i4 {
+    width: 195px;
+    height: 35px;
+    text-transform: capitalize;
+    background: #94b8b8;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border:none;
+}
+div#d {
+    font-size: 30px;
+    margin-top: 100px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+</style>
+<body>
+<div class="all">
+<h1 style="color: black;font-family: font-family: cursive; font-size: 40px;text-align: center;margin-top: 50px;
+    text-transform: uppercase;">Certificate</h1>
+<div id="d" style="display: none;">
+“This certificate is awarded to  <span id="nm"></span> in recognition of their successful completion of
+<span id="rs"></span> on <span id="pq"></span>"
+</div>
+<div class="center">
+	<center>
+<input type="text" id="i1" name="" placeholder="Enter Name" /><br>
+<input type="text" id="i2" name="" placeholder="Enter Course" /><br>
+<input type="text" id="i3" name="" placeholder="Enter Date" /><br>
+
+<button onclick="show()" id="i4">generate certificate</button>
+</center>
+</div>
+</div>
+</body>
+<script>
+function show()
+{
+var a = document.getElementById('i1').value;
+var b = document.getElementById('i2').value;
+var c = document.getElementById('i3').value;
+document.getElementById('nm').innerText = a;
+document.getElementById('rs').innerText = b;
+document.getElementById('pq').innerText = c;
+
+document.getElementById('d').style.display="block";	
+document.getElementById('i1').style.display="none";	
+document.getElementById('i2').style.display="none";	
+document.getElementById('i3').style.display="none";	
+document.getElementById('i4').style.display="none";	
+
+}
+
+</script>
+</html> 

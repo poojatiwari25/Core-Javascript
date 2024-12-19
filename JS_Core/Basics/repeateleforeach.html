@@ -1,0 +1,51 @@
+<script type="text/javascript">
+var ary=[];
+var s = parseInt(prompt('Enter size of array'));
+console.log('enter',s,'elements');
+for(var i=1;i<=s;i++)
+{
+    var t=parseInt(prompt('enter element' +i));
+    ary.push(t);
+}
+ary.forEach(function (v, i, ar) {
+       for (var j =i+1;j<ary.length;j++) {
+            if(ary[i]==ary[j])
+            {
+              console.log('Repeated element is:', ary[i]); 
+              break;
+            }
+     }
+})
+
+
+
+
+
+
+
+
+// var ary=[];
+// var c=0;
+// var s = parseInt(prompt('Enter size of array'));
+// console.log('enter',s,'elements');
+// for(var i=1;i<=s;i++)
+// {
+//     var t=parseInt(prompt('enter element' +i));
+//     ary.push(t);
+// }
+
+// ary.forEach(function (v, i, ar) {
+//        for (var j =i+1;j<ary.length;j++) {
+//             if(ary[i]==ary[j])
+//             {
+//                 c++;
+//             console.log('Repeated element',ary[i], 'and count is',c); 
+//               break;
+//             }
+//      }
+// })
+</script>
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+function show(n) {
+	if (n==0 || n==1) {
+		return 1;
+	}
+	else if (n%2==0) {
+		return n+show(n-2)
+	}else{
+		return n+show(n-1)
+	}
+}
+console.log(show(15));
+</script>
+</body>
+</html>

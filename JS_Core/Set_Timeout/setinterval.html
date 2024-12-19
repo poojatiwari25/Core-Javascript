@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="r"></h1>
+<button onclick="show()">Start</button>
+<button onclick="stops()">Stop</button>
+</body>
+<script type="text/javascript">
+var t;
+var c=1;
+function show(){
+	t=setInterval(function(){
+
+		document.getElementById('r').innerText=c;
+		c++;
+	},1000);
+}
+function stops()
+{
+	clearInterval(t);
+}
+</script>
+</html>
+

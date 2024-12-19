@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <img src="images/bulboff.png" height="100px" width="100px">
+    <button onclick="show()">bulb on</button>
+    <button onclick="shows()">bulb off</button>
+
+</body>
+<script>
+function show()
+{
+    for(let i=0; i<10; i++)
+    {
+    setTimeout (function() {
+       document.getElementsByTagName('img')[i].src="images/bulbon.png";   
+       },i*1000);
+    }
+}
+function shows() 
+{
+    for(let i=9; i>=0 ;i--)
+    {
+    setTimeout (function() {
+document.getElementsByTagName('img')[i].src="images/bulboff.png";   
+},(10-i)*1000);
+}
+}
+</script>
+</html>

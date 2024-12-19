@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+	var sub=['c','c++','dsa','python','java'];
+    var obj={
+    roll:101,
+    name:'ajay',
+    address:'indore',
+    branch:'cs',
+    year:1,
+    sem:2,
+    marks:[45,67,78,54,87]
+};
+
+var keys = Object.keys(obj);
+for(var k of keys)
+{
+    if(k=='marks')
+    {
+        for(var i=0;i<sub.length;i++)
+        {
+            console.log(sub[i],obj[k][i]);
+        }
+    }
+    else{
+        console.log(k,obj[k]);
+        }
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

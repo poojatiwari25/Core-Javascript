@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="r">helo all</h1>
+<select id="c" onchange="show()">
+<option>indore</option>
+<option>ujjain</option>
+<option>dewas</option>
+</select>
+</body>
+<script>
+function show(){
+	var city=document.getElementById('c').value;
+	document.getElementById('r').innerText="welcome"+city;
+}
+</script>
+</html>

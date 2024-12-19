@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+var a = parseInt(prompt('enter 1st number: '));
+var b = parseInt(prompt('enter 2nd number: '));
+var c = parseInt(prompt('enter 3rd number: '));
+
+if(a>b && a>c){
+    console.log('a is greater');
+}
+else if(b>a && b>c){
+    console.log('b is greater');
+}
+else if(c>a && c>b){
+    console.log('c is greater');
+}
+else if(a==b && a>c){
+    console.log('a and b are equal and a is greater');
+}
+else if(b==c && b>a){
+    console.log('b and c are equal and b is greater');
+}
+else if(c==a && c>b){
+    console.log('c and a are equal and c is greater');
+}
+else{
+    console.log('All are equal');
+}
+
+</script>
+</body>
+</html>

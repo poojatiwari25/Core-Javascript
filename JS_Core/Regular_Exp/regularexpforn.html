@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+Name:<input type="text" name="" id="nm"><br>
+Password:<input type="password" name="" id="p1" onclick="display()"><br>
+Confirm Password<input type="password" name="" id="p2"><br>
+<button onclick="show()">Click me</button>
+</form>
+<script>
+function show(){
+	var nm = document.getElementById('nm').value;
+	var p1 = document.getElementById('p1').value;
+    var p2 = document.getElementById('p2').value;
+    var pwd= /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#@*])){8,}/;
+
+    var name = /^[a-z A-Z]+$/;
+    if(nm==''){
+    	alert('please enter name');
+    } 
+    else if(!nm.match(name)){
+    	alert('name must contain alphabets only');
+    }else if(p1!=p2){
+    	alert('password mismatch');
+    }else if(!p1.match(pwd)){
+    	alert('password must contain 1 upercase 1 lowercase 1 special symbol 1 number and atleast characters');
+    }
+}
+function display(){
+	var p= document.getElementById('p1');
+
+	if(p.type='text'){
+		p.type='password';
+	}
+	else{
+		p.type='text';
+	}
+}
+</script>
+</body>
+</html>
